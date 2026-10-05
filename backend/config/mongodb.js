@@ -7,7 +7,7 @@ const connectDB = async () => {
       console.log('DB connected');
     });
 
-    const uri = `${process.env.MONGO_URI}/crud`;
+    const uri = `${process.env.MONGO_URI}`;
     console.log("Connecting to:", uri);  // Debug log
 
     await mongoose.connect(uri);

@@ -1,12 +1,13 @@
 import mongoose from "mongoose";
 import 'dotenv/config';
 
-const connectDB= async () => {
+const connectDB = async () => {
 
-  mongoose.connection.on('connected',()=>{
+  mongoose.connection.on('connected', () => {
     console.log('DB connected');
   })
-  await mongoose.connect(`${process.env.MONGO_URI}/crud`)
+  await mongoose.connect(`${process.env.MONGO_URI}`)
+
 
 
 }
