@@ -17,6 +17,9 @@ const ShopContextProvider = (props) => {
     const [products, setProducts] = useState([]);
     const [token, setToken] = useState('');
     const navigate = useNavigate();
+    const [aiProducts, setAiProducts] = useState([]);
+    const [aiSearchActive, setAiSearchActive] = useState(false);
+    const [aiSearchLoading, setAiSearchLoading] = useState(false);
 
 
     const addToCart = async (itemId, size) => {
@@ -163,7 +166,13 @@ const ShopContextProvider = (props) => {
         backendUrl,
         setToken,
         token,
-        setCartItems
+        setCartItems,
+        aiProducts,
+        setAiProducts,
+        aiSearchActive,
+        setAiSearchActive,
+        aiSearchLoading,
+        setAiSearchLoading,
     }
     return (
         <ShopContext.Provider value={value}>
